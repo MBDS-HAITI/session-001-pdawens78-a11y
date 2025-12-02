@@ -17,7 +17,7 @@ function Header() {
   );
 }
 
-function Infos() {
+function Body() {
   return(
   <>
     <p>Ici, nous afficherons des informations interessantes :</p>
@@ -25,11 +25,22 @@ function Infos() {
   )
 }
 
+function Footer() {
+  const Nom = "Pierre";
+  const Prenom = "Dawens H.";
+  return (
+    <footer className='footer'>
+      Tous droits reserves - {Nom } {Prenom}
+    </footer>
+  )
+}
+
 function App() {
   return (
     <>
       <Header />
-      <Infos/>
+      <Body />
+      <Footer />
     </>
   )
 }

@@ -25,7 +25,7 @@ function MainContent() {
   const Annee = DateComplete.getFullYear();
   const Heure =DateComplete.getHours();
   const Minute = String(DateComplete.getMinutes()).padStart(2,'0');
-  const Second = String(DateComplete.getSeconds()).padEnd(2,'0');
+  const Second = String(DateComplete.getSeconds()).padStart(2,'0');
 
   return(
   <>
@@ -37,9 +37,11 @@ function MainContent() {
 function Footer() {
   const Nom = "Pierre";
   const Prenom = "Dawens H.";
+  const date = new Date();
+  const Annee = date.getFullYear();
   return (
     <footer className='footer'>
-      Tous droits reserves - {Nom } {Prenom}
+      © {Annee} - {Nom }.{Prenom}, Tous droits réservés.
     </footer>
   )
 }

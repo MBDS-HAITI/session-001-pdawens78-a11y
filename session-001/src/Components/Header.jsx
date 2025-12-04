@@ -1,5 +1,5 @@
 import "../App.css";
-import MBDS_Logo from "../assets/MBDS_Logo.png";
+import MBDS_Logo from "../assets/mbds_logo_transparent.svg";
 
 function Header() {
   return (

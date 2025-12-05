@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 import MenuItem from "./MenuItem";
-import { useNavigate } from "react-router-dom";
 
 const menus = [
   { title: "Matieres", path: "/courses" },
@@ -10,23 +9,10 @@ const menus = [
 ];
 
 function Menu() {
-  const [selectedMenu, setSelectedMenu] = useState(menus[0].title);
-  const navigate = useNavigate();
-
-  function handleClick(menu) {
-    setSelectedMenu(menu.title);
-    navigate(menu.path);
-  }
-
   return (
     <nav className="menu">
-      {menus.map((menu, index) => (
-        <MenuItem
-          key={index}
-          title={menu.title}
-          active={selectedMenu === menu.title}
-          onClick={() => handleClick(menu)}
-        />
+      {menus.map((menu) => (
+        <MenuItem key={menu.title} title={menu.title} path={menu.path} />
       ))}
     </nav>
   );

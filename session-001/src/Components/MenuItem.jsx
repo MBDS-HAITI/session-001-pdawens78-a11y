@@ -1,14 +1,16 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
-function MenuItem({ title, active, onClick }) {
+function MenuItem({ title, path }) {
   return (
-    <button
-      type="button"
-      className={active ? "menu-item active" : "menu-item"}
-      onClick={onClick}
+    <NavLink
+      to={path}
+      className={({ isActive }) =>
+        isActive ? "menu-item active" : "menu-item"
+      }
     >
       {title}
-    </button>
+    </NavLink>
   );
 }
 

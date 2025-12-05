@@ -6,9 +6,9 @@ function APropos() {
       <h2>A Propos</h2>
       <p>
         Cette application React a été créée pour afficher les matières, les
-        étudiants et les notes provenant d\'un fichier JSON. Elle utilise des
+        étudiants et les notes provenant d'un fichier JSON. Elle utilise des
         composants simples, des états locaux et des tableaux pour organiser
-        l\'information.
+        l'information.
       </p>
       <p>
         Vous pouvez naviguer entre les différentes sections en utilisant le menu
